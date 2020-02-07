@@ -21,27 +21,20 @@ function handleRequest(req, res) {
 
 //////////ARRAYS OF OBJECTS//////////////
 
-const reservations = [{
-    name: "yoda",
-    name: "Yoda",
-    role: "Jedi Master",
-    age: 900,
-    forcePoints: 2000
-  }, {
-    routeName: "darthmaul",
-    name: "Darth Maul",
-    role: "Sith Lord",
-    age: 200,
-    forcePoints: 1200
-  }, {
-    routeName: "obiwankenobi",
-    name: "Obi Wan Kenobi",
-    role: "Jedi Master",
-    age: 55,
-    forcePoints: 1350
+const reservations = [{ //ONLY 5 TABLES -- after 5 tables created, then waitlist has info
+    name: "#",
+    id: "#",
+    email: "#",
+    phone: 1,
   }];
-  
 
+const waitlist = [{
+    name: "#",
+    id: "#",
+    email: "#",
+    phone: 2,
+}];
+  
 
 //////////////ROUTES////////
 
