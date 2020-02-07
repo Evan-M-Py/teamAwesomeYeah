@@ -1,19 +1,41 @@
 body {
     background-color: black;
+    background-image: url("backgroundTable.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     
 
 }
 
 .jumbo-style {
-    background-color: #272222;
+    background-color: #000000b6;
     color: white;
     margin: 10px;
+    justify-content: center;
+}
+
+.btn-div {
+    margin: 0 310px 0 310px;
+    display: inline-block;
 }
 
 .btn-reserve {
-    background-color: black;
+    background-color: #8cc8f0;
+    color: #4b4747;
+    border: none;
+
+}
+
+.btn-mktable {
+    background-color: #771818;
+    border: none;
+
 }
 
 .btn-reserve:hover {
-    background-color: #181616;
+    background-color: #72a4c5;
+}
+
+.btn-mktable:hover {
+    background-color: #3a0c0c;
 }
