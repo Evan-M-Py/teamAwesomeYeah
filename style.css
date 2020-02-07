@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+    
+
+}
+
+.jumbo-style {
+    background-color: #272222;
+    color: white;
+    margin: 10px;
+}
+
+.btn-reserve {
+    background-color: black;
+}
+
+.btn-reserve:hover {
+    background-color: #181616;
+}

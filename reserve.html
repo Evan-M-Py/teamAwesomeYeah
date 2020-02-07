@@ -9,20 +9,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/36bc69bb96.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="container">
-            <div class="jumbotron">
+            <div class="jumbotron jumbo-style">
                 <h1 class="display-3 text-center"> What's Shake'n <i class="fa fa-bacon"></i> </h1>
 
                 <hr class="my-4">
-                <p class="lead text-center">Cureent Reservations and Waiting List</p>
+                <p class="lead text-center">Current Reservations and Waiting List</p>
 
-                <a class="btn btn-primary btn-lg" href="#" role="button"><i class="fa fa-credit-card"></i> Make
-                    Reservation</a>
-                <a class="btn btn-primary btn-lg" href="#" role="button"><i class="fa fa-home"></i></a>
+                <a class="btn btn-primary btn-lg btn-mktable" href="tables.html" role="button"><i
+                        class="fa fa-calendar"></i> View Table</a>
+                <a class="btn btn-primary btn-lg btn-home" href="home.html" role="button"><i class="fa fa-home"></i></a>
             </div>
         </div>
     </div>
@@ -31,51 +32,30 @@
             <form>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="inputEmail4">Email</label>
-                        <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+                        <label for="inputName">Name</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Name">
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="inputPassword4">Password</label>
-                        <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="inputAddress">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+                    <label for="inputPhone">Phone Number</label>
+                    <input type="text" class="form-control" id="inputPhone" placeholder="###-###-####">
                 </div>
-                <div class="form-group">
-                    <label for="inputAddress2">Address 2</label>
-                    <input type="text" class="form-control" id="inputAddress2"
-                        placeholder="Apartment, studio, or floor">
-                </div>
-                <div class="form-row">
-                    <div class="form-group col-md-6">
-                        <label for="inputCity">City</label>
-                        <input type="text" class="form-control" id="inputCity">
-                    </div>
-                    <div class="form-group col-md-4">
-                        <label for="inputState">State</label>
-                        <select id="inputState" class="form-control">
-                            <option selected>Choose...</option>
-                            <option>...</option>
-                        </select>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="inputZip">Zip</label>
-                        <input type="text" class="form-control" id="inputZip">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                        <label class="form-check-label" for="gridCheck">
-                            Check me out
-                        </label>
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Sign in</button>
-            </form>
         </div>
+        <button type="submit" id="submitbtn" class="btn subTry btn-primary">Reserve Table</button>
+        </form>
     </div>
     </div>
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="reserve.js"></script>
 </body>
+
+
+
