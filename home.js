@@ -47,18 +47,20 @@ app.get("/makeReservation", function(req, res) {
   res.sendFile(path.join(__dirname + '/tables.html'));
 });
 
+app.get("/api/tableData", function(req, res) {
+  return res.json(tables);
+});
+
 app.post("/api/makeTable", function(req, res) {
   const newTable = req.body;
-
-  // Using a RegEx Pattern to remove spaces from newCharacter
-  // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-  newTable.routeName = newTable.name.replace(/\s+/g, "").toLowerCase();
-
-  console.log(newTable);
-
+  if(tables.length <= 6){
+    waitlist.push(newTable)
+    res.json(newTable);
+  }else{
   tables.push(newTable);
-
   res.json(newTable);
+  }
+  console.log(newTable);
 });
 
   ///////START SERVER//////
