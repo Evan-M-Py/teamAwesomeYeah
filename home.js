@@ -1,10 +1,39 @@
-const http = require("http");
+const express = require("express");
 
-const fs = require("fs");
+const path = require("path");
 
 //Set port to 3000
 
+const app = express();
+
 const PORT = process.env.PORT || 3000;
+
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// Create a function for handling requests and responses coming into our server
+function handleRequest(req, res) {
+    if (err) throw err;
+  };
+
+//////////ARRAYS OF OBJECTS//////////////
+
+const tables = [{ //ONLY 5 TABLES -- after 5 tables created, then waitlist has info
+    name: "#",
+    id: "#",
+    email: "#",
+    phone: 1,
+  }];
+
+const waitlist = [{
+    name: "#",
+    id: "#",
+    email: "#",
+    phone: 2,
+}];
+  
+//////////////ROUTES////////
 
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname + '/home.html'));
@@ -27,20 +56,13 @@ app.post("/api/makeTable", function(req, res) {
 
   console.log(newTable);
 
-  tables.push(newTable;
+  tables.push(newTable);
 
   res.json(newTable);
 });
 
-const server = http.createServer(handleRequest);
+  ///////START SERVER//////
 
-// Create a function for handling requests and responses coming into our server
-function handleRequest(req, res) {
-    if (err) throw err;
-  };
-
-
-// Starts our server
-server.listen(PORT, function() {
-  console.log("Server is listening on PORT: " + PORT);
-});
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
