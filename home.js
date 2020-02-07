@@ -53,14 +53,15 @@ app.get("/api/tableData", function(req, res) {
 
 app.post("/api/makeTable", function(req, res) {
   const newTable = req.body;
-  if(tables.length <= 6){
-    waitlist.push(newTable)
-    res.json(newTable);
-  }else{
-  tables.push(newTable);
-  res.json(newTable);
-  }
-  console.log(newTable);
+//   if(tables.length <= 6){
+//     waitlist.push(newTable)
+//     res.json(newTable);
+//   }else{
+//   tables.push(newTable);
+//   res.json(newTable);
+//   }
+    console.log(req);
+    return res.json(newTable); // have to return the input so that Postman shows it
 });
 
   ///////START SERVER//////
