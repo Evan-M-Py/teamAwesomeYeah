@@ -21,14 +21,12 @@ function handleRequest(req, res) {
 
 const tables = [{ //ONLY 5 TABLES -- after 5 tables created, then waitlist has info
     name: "#",
-    id: "#",
     email: "#",
     phone: 1,
   }];
 
 const waitlist = [{
     name: "#",
-    id: "#",
     email: "#",
     phone: 2,
 }];
