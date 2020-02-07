@@ -1,16 +1,38 @@
-const express = require("express");
+const http = require("http");
 
-const path = require("path");
+const fs = require("fs");
 
 //Set port to 3000
 
-const app = express();
-
 const PORT = process.env.PORT || 3000;
 
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.get("/", function(req, res) {
+  res.sendFile(path.join(__dirname + '/home.html'));
+});
+
+app.get("/makeReservation", function(req, res) {
+  res.sendFile(path.join(__dirname + '/reserve.html'));
+});
+
+app.get("/makeReservation", function(req, res) {
+  res.sendFile(path.join(__dirname + '/tables.html'));
+});
+
+app.post("/api/makeTable", function(req, res) {
+  const newTable = req.body;
+
+  // Using a RegEx Pattern to remove spaces from newCharacter
+  // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
+  newTable.routeName = newTable.name.replace(/\s+/g, "").toLowerCase();
+
+  console.log(newTable);
+
+  tables.push(newTable;
+
+  res.json(newTable);
+});
+
+const server = http.createServer(handleRequest);
 
 // Create a function for handling requests and responses coming into our server
 function handleRequest(req, res) {
@@ -18,32 +40,7 @@ function handleRequest(req, res) {
   };
 
 
-
-//////////ARRAYS OF OBJECTS//////////////
-
-const reservations = [{ //ONLY 5 TABLES -- after 5 tables created, then waitlist has info
-    name: "#",
-    id: "#",
-    email: "#",
-    phone: 1,
-  }];
-
-const waitlist = [{
-    name: "#",
-    id: "#",
-    email: "#",
-    phone: 2,
-}];
-  
-
-//////////////ROUTES////////
-
-
-
-
-  ///////START SERVER//////
-
-
-  app.listen(PORT, function() {
-    console.log("App listening on PORT " + PORT);
-  });
+// Starts our server
+server.listen(PORT, function() {
+  console.log("Server is listening on PORT: " + PORT);
+});
